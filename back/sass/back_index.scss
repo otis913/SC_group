@@ -1,0 +1,369 @@
+@import "./reset";
+@import "./sassMix";
+@import "./sassVar";
+body {
+  background-image: url(../../img/gray_bg.png);
+  cursor: default;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: map-get($color, "white");
+  font-weight: bold;
+  img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 2vw;
+  }
+  h1 {
+    font-size: 2rem;
+    color: map-get($color, "gold");
+    line-height: 100px;
+    margin-left: 20px;
+  }
+  a {
+    font-size: 15px;
+    font-weight: bold;
+    color: map-get($color, "gold");
+    line-height: 100px;
+    margin-left: auto;
+    margin-right: 50px;
+  }
+  a:hover {
+    color: map-get($color, "pink");
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.section_main {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+  #submitBtn {
+    @include a();
+    @include inserBtn();
+    @include inserBtnH();
+  }
+  img {
+    display: block;
+    width: 100px;
+  }
+}
+
+.left_list {
+  width: 15%;
+}
+
+.left_btn {
+  ul {}
+  li {
+    margin-bottom: 15px;
+  }
+}
+
+.leftBtn {
+  @include a();
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  background-color: map-get($color, "main_g");
+  font-size: 20px;
+  border: 1px solid #eeebeb;
+  border-radius: 10px;
+  font-weight: bold;
+  color: map-get($color, "gold");
+  &:hover {
+    background-color: map-get($color, "gold");
+    color: map-get($color, "main_g");
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+.a_click {
+  background-color: map-get($color, "gold");
+  color: map-get($color, "main_g");
+}
+
+.right_main {
+  width: 85%;
+  margin-left: 20px;
+  color: #000;
+  overflow: visible;
+  height: auto;
+  h1 {
+    @include h1();
+  }
+  .bottom_line {
+    @include bottom_line(200px);
+  }
+  a {
+    @include a();
+  }
+  // img {
+  //   display: block;
+  //   width: 100px;
+  // }
+}
+
+.table_div {
+  .table {
+    font-size: 20px;
+    text-align: center;
+  }
+  a {
+    @include a();
+    &:hover {
+      color: map-get($color, "pink");
+    }
+  }
+}
+
+.inserBtn {
+  @include a();
+  @include inserBtn();
+  @include inserBtnH();
+}
+
+.cancel_check {
+  display: flex;
+  justify-content: center;
+  input {
+    @include inserBtn();
+    @include inserBtnH();
+    margin: 10px;
+  }
+}
+
+.search_name {
+  h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .search_text {
+    margin-bottom: 10px;
+  }
+}
+
+.productType_select {
+  margin-bottom: 10px;
+  padding: 3px;
+  width: 202px;
+}
+
+// .table td, .table th
+.table {
+  tr {
+    font-weight: bold;
+  }
+  td {
+    border-top: none;
+  }
+  img {
+    margin: 0 auto;
+  }
+}
+
+// --------------------------登入頁面
+.Sign_div {
+  width: 1200px;
+  margin: 0 auto;
+  h1 {
+    @include h1();
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  form {
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid map-get($color, "gold");
+    background-color: map-get($color, "main_g");
+  }
+}
+
+.Sign_table {
+  margin: 10px auto;
+  color: map-get($color, "gray");
+  tr {}
+  td {
+    padding: 5px 35px;
+  }
+}
+
+.toggle_icon {
+  margin-left: 3px;
+}
+
+.account {}
+
+.password {}
+
+.toggle_iconP {
+  margin-left: 3px;
+}
+
+.sign_div {
+  display: flex;
+  justify-content: center;
+}
+
+.to_index {
+  @include a();
+  @include inserBtn();
+  @include inserBtnH();
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 5px 20px;
+}
+
+.sign {
+  @include a();
+  @include inserBtn();
+  @include inserBtnH();
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px 5px 20px;
+}
+
+// --------------------------課程管理
+.table_hand {
+  th {}
+  tr {}
+  td {}
+  .fas {
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  td:nth-child(2) {
+    width: 450px;
+  }
+}
+
+.table__hideText {
+  display: block;
+  text-align: center;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.hand_content {
+  display: none;
+}
+
+// .hand_content_show {
+//   display: block;
+// }
+// --------------------------課程編輯
+.table_div_handEdit {
+  th {}
+  tr {}
+  td {}
+}
+
+// --------------------------文章管理
+.table_div_know {
+  th {}
+  tr {}
+  td {}
+}
+
+// --------------------------文章編輯
+.table_div_knowEdit {
+  th {}
+  tr {}
+  td {}
+  textarea {
+    overflow: auto;
+  }
+}
+
+// --------------------------文章新增
+.table_div_knowCreat {
+  th {}
+  tr {}
+  td {}
+  textarea {
+    overflow: auto;
+  }
+  input {}
+}
+
+// --------------------------會員管理
+.table_div_member {
+  th {}
+  tr {}
+  td {}
+}
+
+.fa-search {
+  cursor: pointer;
+}
+
+// --------------------------訂單管理
+.table_div_order {
+  th {}
+  tr {}
+  td {}
+}
+
+//-------------------------- 商品管理
+.table_div_product {
+  th {}
+  tr {}
+  td {}
+}
+
+// --------------------------商品編輯
+.table_div_product {
+  th {}
+  tr {}
+  td {}
+  textarea {}
+}
+
+// --------------------------商品新增
+.table_div_productNew {
+  th {}
+  tr {}
+  td {}
+  select {}
+  option {}
+  textarea {}
+  input {}
+}
+
+// --------------------------訊息管理
+.table_div_report {
+  th {}
+  tr {}
+  td {}
+  select {}
+  option {}
+  textarea {}
+  input {}
+}
+
+// --------------------------訊息回覆
+.table_div_reportEdit {
+  th {}
+  tr {}
+  td {}
+  select {}
+  option {}
+  textarea {}
+  input {}
+}
